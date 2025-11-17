@@ -1,0 +1,22 @@
+rcs:
+  host: "127.0.0.1"      
+  port: 502                  
+  timeout: 3.0
+  unit_id: 1
+
+registers:
+  reset_errors: 100          # i1.100.0
+  enable_drives: 101         # i1.100.1
+  start_program: 102         # i1.100.2
+  program_number: 107        # i4.107.0 (int32)
+  target_x: 200              # o4.200.0 (float)
+  target_y: 201              # o4.201.0
+  target_z: 202              # o4.202.0
+  status_word: 300           # i2.300.0
+
+calibration:
+  home_position: [0.0, 0.0, 300.0, 0.0, 90.0, 0.0]  
+  cone_positions:            
+    - [100.0, 100.0, 0.0]
+    - [300.0, 100.0, 0.0]
+    - [200.0, 300.0, 0.0]
