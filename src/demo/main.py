@@ -1,4 +1,3 @@
-import cv2
 import logging
 from ultralytics import YOLO
 from src.client.rcs_modbus_client import RCSModbusClient
@@ -27,7 +26,6 @@ def main():
         logger.error(f"Runtime error: {e}")
     finally:
         rcs.close()
-        cv2.destroyAllWindows()
 
 
 if __name__ == "__main__":
